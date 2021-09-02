@@ -1,0 +1,43 @@
+{
+  "name": "typescript-themoviedb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/jest": "^27.0.1",
+    "babel-jest": "^27.1.0",
+    "jest": "^27.1.0",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.4.2"
+  },
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElSnoMan/typescript-themoviedb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElSnoMan/typescript-themoviedb/issues"
+  },
+  "homepage": "https://github.com/ElSnoMan/typescript-themoviedb#readme",
+  "jest": {
+    "verbose": false,
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ]
+  }
+}
