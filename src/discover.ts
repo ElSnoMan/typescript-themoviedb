@@ -1,10 +1,12 @@
+import _ = require("lodash")
 import axios, { AxiosResponse } from "axios"
-import { API_KEY, BASE_URL } from "./settings"
-import { DiscoverResponse } from "./models/movies"
+import { BASE_URL, config } from "./settings"
+import { DiscoverRequest, DiscoverResponse } from "./models/movieModels"
 
 
-export async function discoverMovies(): Promise<AxiosResponse<DiscoverResponse>> {
-    const config = {headers: {"Authorization": `Bearer ${API_KEY}`}}
+export async function discoverMovies(params: DiscoverRequest): Promise<AxiosResponse<DiscoverResponse>> {
+    let request = _.clone(config)
+    request["params"] = params
     const response = await axios.get<DiscoverResponse>(BASE_URL + "/discover/movie", config)
     return response
 }
